@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    background: linear-gradient(90deg, rgb(2, 2, 3) 0%, rgb(9, 14, 17) 50%, rgb(2, 2, 3) 100%);
+    color: #838383;
+    font-family: Inconsolata;
+    font-size: 16px;
+    min-width: 350px;
+    overflow: hidden;
+}
+h1,label{
+    text-align: center;
+    display: block;
+    margin: 1rem 0;
+  }
+label{
+    text-align: left;
+}
+input,select,textarea{
+    /* border: #474747 2px solid;
+    // box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.25);
+    background-color: #474747;*/
+    background: none;
+    border: none;
+    border-bottom: 1px solid #838383;
+    width: 100%;
+    height: 2em;
+    max-width: 250px;
+    box-sizing: border-box;
+    color: #c5c5c5;
+    font-family: Inconsolata;
+}
+select, option{
+    color: #c5c5c5;
+    border-radius: 0;
+}
+option{
+    background-color: #474747;
+    border-radius: 0;
+}
+input:hover{
+    box-shadow: 0px 10px 7px -7px #838383;
+    background: rgb(9, 14, 17);
+    transition: 0.4s;
+}
+input,select:focus{
+    outline: none;
+    
+    box-shadow: 0px 5px 7px -7px #838383;
+}
+input[type="submit"]{
+
+}
+
