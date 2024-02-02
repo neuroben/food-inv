@@ -7,15 +7,45 @@
         </head>
     <body style="margin-top: -150px;">
         <div class="body-container">
-            <form action="https://1337-neuroben-foodinv-inb7p9a3qw8.ws-eu107.gitpod.io/api/auth/local" method="post" novalidate>
-                <label for="username">nickname
-                    <input type="text" name="username" id="username" required>
+            <form class="form" novalidate>
+                <label for="identifier">nickname
+                    <input type="text" name="identifier" id="identifier" autocomplete="on" required>
                 </label>
                 <label for="password">pass
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" autocomplete="on" required>
                 </label>
+                <label id="asd">valami</label>
                 <input type="submit" value="ok">
             </form>
+
+            <script>
+                const form = document.querySelector('form');
+
+                function myFunction() {
+                        alert("I am an alert box!");
+                }
+
+                form.addEventListener('submit', (e) => { // e === event
+                    e.preventDefault(); // nem akarunk semmilyen előre beállított működést pl. oldal frissítés
+                
+
+                    const formData = new FormData(form);
+                    //console.log(formData.get('identifier'));
+                    //console.log(formData.get('password'));
+
+                    fetch('https://1337-neuroben-foodinv-inb7p9a3qw8.ws-eu107.gitpod.io/api/auth/local', {
+                        method: "POST",
+                        body: formData,
+                    })
+                        .then(res => res.json())   //res === response --> .json() functionnal formázzuk a választ json formátumba
+                        //.then(res => console.log(res.error));
+                        //.then(res => document.getElementById("asd").innerText = res.error.message);  
+                    
+                    
+                    console.log(res);
+                });
+            </script>
+
         </div>
     </body>
 </html>
