@@ -1,0 +1,27 @@
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #F8FFE5;
+    font-size: 1.5em;
+    margin: 10px;
+    width: 50%;
+    margin: 0;
+    height: 2em;
+    border-radius: 20px;
+  }
+  a:hover{
+    background-color: #17181b;
+  }
+  a:active{
+    background-color: #0D0E10;
+  }
+  

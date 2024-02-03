@@ -38,11 +38,11 @@
                         body: formData,
                     })
                         .then(res => res.json())   //res === response --> .json() functionnal formázzuk a választ json formátumba
-                        //.then(res => console.log(res.error));
-                        //.then(res => document.getElementById("asd").innerText = res.error.message);  
+                        .then(res => console.log(res))
+                        .then(res => document.getElementById("asd").innerText = res.body);  
                     
                     
-                    console.log(res);
+                    //console.log(res);
                 });
             </script>
 
