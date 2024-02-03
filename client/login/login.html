@@ -19,6 +19,7 @@
             </form>
 
             <script>
+                require('dotenv').config();
                 const form = document.querySelector('form');
 
 
@@ -40,7 +41,7 @@
                         console.log(data);
                         
                             if(data.user.blocked == false && data.user.confirmed == true ){
-                                window.location.replace('https://8000-neuroben-foodinv-inb7p9a3qw8.ws-eu108.gitpod.io/food/food.html');
+                                window.location.replace(`${process.env.STRAPI_U}/food/food.html`);
                             } else {
                                 console.log('User is either blocked or not confirmed');
                             }
