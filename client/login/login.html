@@ -14,16 +14,14 @@
                 <label for="password">pass
                     <input type="password" name="password" id="password" autocomplete="on" required>
                 </label>
-                <label id="asd">valami</label>
+                <label id="asd"></label>
                 <input type="submit" value="ok">
             </form>
 
             <script>
                 const form = document.querySelector('form');
 
-                function myFunction() {
-                        alert("I am an alert box!");
-                }
+
 
                 form.addEventListener('submit', (e) => { // e === event
                     e.preventDefault(); // nem akarunk semmilyen előre beállított működést pl. oldal frissítés
@@ -38,11 +36,18 @@
                         body: formData,
                     })
                         .then(res => res.json())   //res === response --> .json() functionnal formázzuk a választ json formátumba
-                        .then(res => console.log(res))
-                        .then(res => document.getElementById("asd").innerText = res.body);  
-                    
-                    
+                        .then(data => { 
+                        console.log(data);
+                        
+                            if(data.user.blocked == false && data.user.confirmed == true ){
+                                window.location.replace('https://8000-neuroben-foodinv-inb7p9a3qw8.ws-eu107.gitpod.io/food/food.html');
+                            } else {
+                                console.log('User is either blocked or not confirmed');
+                            }
+                        });
                     //console.log(res);
+                    //.then(res => console.log(res))
+                    //.then(res => document.getElementById("asd").innerText = res.body); 
                 });
             </script>
 
