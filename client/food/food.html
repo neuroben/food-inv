@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+
   <title>Flexbox Practice</title>
+  <script src="./script.js"></script>
   <link rel="stylesheet" href="style.css"></link>
   <link rel="stylesheet" href="navbar.css"></link>
 </head>
@@ -17,6 +20,68 @@
 
 
     <div class="content">
+      <table>
+        <caption>
+          <h1>food inventory</h1>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">food</th>
+            <th scope="col">quantity</th>
+            <th scope="col">unit</th>
+            <th scope="col">price</th>
+            <th scope="col">description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Nem palacsinta</th>
+            <td>15</td>
+            <td>db</td>
+            <td>750 Ft</td>
+            <td>Ez egy hosszabb leírás arról hogy finom a palacsinta</td>
+          </tr>
+          <tr>
+            <th scope="row">Tonhalfőzelék</th>
+            <td>25</td>
+            <td>l</td>
+            <td>43.000 Ft</td>
+            <td>Ez elég undorítóan hangzik és nagyon sok meg drága</td>
+          </tr>
+      
+          <tr>
+            <th scope="row">Rántott bigyók</th>
+            <td>500</td>
+            <td>db</td>
+            <td>400.000 Ft</td>
+            <td>De minek?</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">Ide jön majd a sor hozzáadás</th>
+          </tr>
+        </tfoot>
+      </table>
+
+<!--
+      <table id="html-data-table">
+        <tr class="header">
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>completed</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>My todo 1</td>
+            <td>false</td>
+        </tr>
+    </table>  
+
+
+      
       <div class="data-table">
         <div class="rows data-header">
           <div class="data-cell">food</div>
@@ -37,6 +102,7 @@
           <div class="data-cell">2000 Ft</div>
         </div>
       </div>
+      -->
     </div>
   </div>
 </body>
