@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(27,27,50,1) 0%, rgba(0,48,73,1) 50%, rgba(27,27,50,1) 100%);
+    color: #D4D6B9;
+    font-family: Tahoma;
+    font-size: 16px;
+    min-width: 350px;
+    overflow: hidden;
+}
+h1,label{
+    text-align: center;
+    display: block;
+    margin: 1rem 0;
+  }
+form {
+    text-align: left;
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+label{
+    text-align: left;
+}
+input,textarea,select{
+    border: rgb(8, 7, 7) 2px solid;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.25);
+    background-color: #D4D6B9;
+    width: 100%;
+    border-radius: 5px;
+    height: 2em;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+input:focus,textarea:focus,select:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px 2px rgba(255, 227, 191, 0.541);
+    background-color: #e7e7e4;
+}
+textarea{
+    height: 100px;
+    resize: none;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 0;
+    max-height: 25px;
+}
+
+input[id="quantity"] {
+    width: 90%; /* Adjust as needed */
+    text-align: right;
+}
+
+select {
+    height: 26.66px; /* Adjust as needed */
+}
