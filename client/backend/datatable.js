@@ -1,7 +1,5 @@
 import env from "./routes.js";
 
-
-
 fetchData().then(foods => renderData(foods));
 
 // fetching data from strapi
@@ -75,29 +73,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // on save button click refresh the page to get a new fetch
         const save = document.querySelector('.save-');
         save.addEventListener("click", async (e) => {
-        e.preventDefault();
-        let data = []
-        console.log(document.getElementsByClassName("input"));
-        for(let i = 0; i < 5; i++){
-            data.push(document.getElementsByClassName("input")[i].value)
-        }
+            e.preventDefault();
+            let data = []
+            for(let i = 0; i < 5; i++){
+                data.push(document.getElementsByClassName("input")[i].value)
+            }
             const response = await fetch(`${env.strapi}/api/foods`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + env.bearer,
-            },
-            body: JSON.stringify({
-                'data': {
-                'food': data[0],
-                'quantity': data[1],
-                'unit': data[2],
-                'price': data[3],
-                'description': data[4]
-                }
-            })
-        });
-        location.reload()
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + env.bearer,
+                },
+                body: JSON.stringify({
+                    'data': {
+                    'food': data[0],
+                    'quantity': data[1],
+                    'unit': data[2],
+                    'price': data[3],
+                    'description': data[4]
+                    }
+                })
+            });
+            location.reload()
         });
     });
+    // deleting rows
 });
