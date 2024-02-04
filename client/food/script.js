@@ -3,7 +3,7 @@ console.log('food script loaded!');
 fetch('https://1337-neuroben-foodinv-inb7p9a3qw8.ws-eu108.gitpod.io/api/foods',{
     method: "GET",
     headers: {    
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA2OTkxMzg3LCJleHAiOjE3MDk1ODMzODd9.mQIrZ9lKCXFccT2HL77ZpGzasPrEbKEnieiAYn94uAs'
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA3MDEyOTE5LCJleHAiOjE3MDk2MDQ5MTl9.zgj6hbKBnGO-oI3CDQi3GoNs_HYTiyUIkgvTMdT2K3U'
     }
 })
     .then(function (response){
