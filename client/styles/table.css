@@ -4,9 +4,6 @@ table{
   border-collapse: collapse;
   border: 1px solid #F8FFE5;
 }
-thead tr{
-  background-color: #313235;
-}
 thead th:nth-child(1) {
   width: 30%;
 }
@@ -19,22 +16,25 @@ thead th:nth-child(3) {
 thead th:nth-child(4) {
   width: 10%;
 }
-tbody td:nth-child(4) {
+td:nth-child(2), td:nth-child(4) {
   text-align: right;
+}
+td:nth-child(1), td:nth-child(3){
+  text-align: left;
 }
 thead th:nth-child(5) {
   width: 40%;
 }
 th,
 td {
-  padding: 10px;
+  padding: 5px;
 }
-tbody td {
+td {
   text-align: center;
 }
-tfoot th {
-  text-align: right;
-}
-tbody tr:nth-child(even) {
+tr:nth-child(odd) {
   background-color: #313235;
+}
+tr:hover{
+  background-color: #4d4e52;
 }

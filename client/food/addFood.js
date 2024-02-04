@@ -75,8 +75,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
             })
         });
-
-        const entry = await response.json();
-        console.log(entry);
+        location.reload()
     });
 });
