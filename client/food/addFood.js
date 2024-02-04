@@ -1,4 +1,4 @@
-console.log('addFood is loaded')
+import url from "../backend/routes.js";
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const newFoodButton = document.querySelector('.newFood');
@@ -10,34 +10,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         for(i = 0; i < 5; i++){
             let cell = document.createElement("td");
             cell.innerText = `${i}`;
-            cell.innerHTML = "<input class = 'input"/*-"+`${i}`+"'*/+" type = 'text' style='max-width: 100%'>"
-            /* semmi szükség túlbonyolítani indexeléssel haha de erre persze csak utána ... */
+            cell.innerHTML = "<input class = 'input' type = 'text' style='max-width: 100%'>"
             newRow.appendChild(cell);
         }
         table.appendChild(newRow);
     });
 });
-
-/*
-let data = []
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const addButton = document.querySelector('.addFood');
-    
-    addButton.addEventListener("click", async (e) => {
-
-    for(i = 0; i < 5; i++){
-        console.log(document.getElementsByClassName("input")[i].value);
-        //console.log(document.getElementsByClassName("input-"+`${i}`)[0].value);
-        //data.push(document.getElementByClassName("input-"+`${i}`)[0].value); ezeket azért itt hagyom :D
-
-    }
-
-    });
-});
-
-console.log(data);
-*/
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const addButton = document.querySelector('.addFood');
@@ -48,18 +26,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         for(i = 0; i < 5; i++){
             data.push(document.getElementsByClassName("input")[i].value)
         }
-        /*
-        const entry = await strapi.entityService.create('api::food.food', {
-            data: {
-              food: data[0],
-              quantity: data[1],
-              unit: data[2],
-              price: data[3],
-              description: data[4]
-            }
-          });
-          */
-          const response = await fetch('https://1337-neuroben-foodinv-inb7p9a3qw8.ws-eu108.gitpod.io/api/foods', {
+          const response = await fetch(`${url.strapi}/api/foods`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

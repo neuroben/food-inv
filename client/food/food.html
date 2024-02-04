@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<link>
+<head>
   <meta charset="UTF-8">
-
-  <title>Flexbox Practice</title>
-  <script src="./script.js"></script>
-  <script src="./addFood.js"></script>
-  <link rel="stylesheet" href="../styles/style.css"></link>
+  <title>food-data</title>
+  <script type="module" src="./script.js"></script>
+  <script type="module" src="./addFood.js"></script>
+  <link rel="stylesheet" href="../styles/style.css"></head>
   <link rel="stylesheet" href="../styles/navbar.css"></link>
   <link rel="stylesheet" href="../styles/table.css"></link>
 </head>
 <body>
 
   <div class="container">
+
     <div class="side-nav">
       <a href="./index.html">food</a>
       <a><button class="newFood">new food</button></a>
@@ -21,7 +21,6 @@
       <a href="./admin">admin</a>
       <a href="./logout">logout</a>
     </div>
-
 
     <div class="content">
       <table id="table">
@@ -37,80 +36,9 @@
             <th scope="col">description</th>
           </tr>
         </thead>
-        <tbody>
-          <!--
-          <tr>
-            <th scope="row">Nem palacsinta</th>
-            <td>15</td>
-            <td>db</td>
-            <td>750 Ft</td>
-            <td>Ez egy hosszabb leírás arról hogy finom a palacsinta</td>
-          </tr>
-          <tr>
-            <th scope="row">Tonhalfőzelék</th>
-            <td>25</td>
-            <td>l</td>
-            <td>43.000 Ft</td>
-            <td>Ez elég undorítóan hangzik és nagyon sok meg drága</td>
-          </tr>
-      
-          <tr>
-            <th scope="row">Rántott bigyók</th>
-            <td>500</td>
-            <td>db</td>
-            <td>400.000 Ft</td>
-            <td>De minek?</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th scope="row" colspan="2">Ide jön majd a sor hozzáadás</th>
-          </tr>
-        </tfoot>
-        -->
       </table>
-
-<!--
-      <table id="html-data-table">
-        <tr class="header">
-            <th>userId</th>
-            <th>id</th>
-            <th>title</th>
-            <th>completed</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>My todo 1</td>
-            <td>false</td>
-        </tr>
-    </table>  
-
-
-      
-      <div class="data-table">
-        <div class="rows data-header">
-          <div class="data-cell">food</div>
-          <div class="data-cell">quantity</div>
-          <div class="data-cell">unit</div>
-          <div class="data-cell">price</div>
-        </div>
-        <div class="rows data-row">
-          <div class="data-cell">palacsinta</div>
-          <div class="data-cell">15</div>
-          <div class="data-cell">darab</div>
-          <div class="data-cell">2000 Ft</div>
-        </div>
-        <div class="rows data-row">
-          <div class="data-cell">palacsinta</div>
-          <div class="data-cell">15</div>
-          <div class="data-cell">darab</div>
-          <div class="data-cell">2000 Ft</div>
-        </div>
-      </div>
-      -->
-
     </div>
+
   </div>
 </body>
 </html>
