@@ -47,6 +47,20 @@ function svgButton(id,func,route){
     return svgButton;
 };
 
+async function deleteElement(id){
+    const response = await fetch(`${env.strapi}/api/foods/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + env.bearer,
+        }
+    });
+
+    const responseJson = await response.json();
+    console.log(responseJson);
+    location.reload();
+}
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
     // adding new foods on button click -- rendering a new row and inserting input elements
@@ -94,8 +108,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     }
                 })
             });
-            location.reload()
+            location.reload();
         });
     });
-    // deleting rows
+    // deleting a row, and removing from strapi's db
+    const table = document.getElementById("table");
+    console.log(table);
+    table.addEventListener('click', (event) => {
+        let target = event.target;
+        if (target.tagName === 'IMG') {
+            target = target.parentElement;
+        }
+        if (target.tagName === 'BUTTON' && target.className.startsWith('del-')) {
+            const id = target.className.split('-')[1];
+            console.log(id);
+            deleteElement(id);
+        }
+    });
 });
