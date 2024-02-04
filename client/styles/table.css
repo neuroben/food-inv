@@ -20,15 +20,34 @@ thead th:nth-child(1) {width: 32.5%;}
 thead th:nth-child(2) {width: 5%;}
 thead th:nth-child(3) {width: 2.5%;}
 thead th:nth-child(4) {width: 5%;}
-thead th:nth-child(5) {width: 45%;}
+thead th:nth-child(5) {width: 35%;}
+thead th:nth-child(6) {width: 10%;}
+
 
 td:nth-child(even){
   text-align: right;
 }
+td:nth-child(6){
+  text-align: center;
+}
 td:nth-child(odd){
   text-align: left;
 }
-
 tr:hover{
   background-color: #4d4e52;
+}
+input{
+  max-width: 100%;
+  background: none;
+  border-radius: 2px;
+  font-family: inherit;
+  color: inherit;
+}
+img{
+  max-width: 20px;
+  max-height: 20px;
+}
+img:hover{
+  max-width: 25px;
+  max-height: 25px;
 }

@@ -7,12 +7,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         e.preventDefault();
         const table = document.getElementById("table");
         let newRow = document.createElement("tr");
-        for(i = 0; i < 5; i++){
+        
+        for(let i = 0; i < 5; i++){
+            let inPut = document.createElement("input");
             let cell = document.createElement("td");
-            cell.innerText = `${i}`;
-            cell.innerHTML = "<input class = 'input' type = 'text' style='max-width: 100%'>"
+            inPut.setAttribute("type", "text");
+
+            cell.appendChild(inPut);
             newRow.appendChild(cell);
         }
+
         table.appendChild(newRow);
     });
 });
@@ -23,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     addButton.addEventListener("click", async (e) => {
         e.preventDefault();
         let data = []
-        for(i = 0; i < 5; i++){
+        for(let i = 0; i < 5; i++){
             data.push(document.getElementsByClassName("input")[i].value)
         }
           const response = await fetch(`${url.strapi}/api/foods`, {

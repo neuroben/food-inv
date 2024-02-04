@@ -21,7 +21,7 @@ function renderData(foods){
 
     foods.forEach(foodItem => {
         let newRow = document.createElement("tr");
-
+        
         propertiesToInclude.forEach((property) => {
             let cell = document.createElement("td");
 
@@ -29,6 +29,13 @@ function renderData(foods){
 
             newRow.appendChild(cell);
         })
+        let cell = document.createElement("td");
+        let delButton = document.createElement("button");
+        let svgI = document.createElement("img");
+        svgI.setAttribute("src","../icons/delete-f8.svg")
+
+        cell.appendChild(svgI);
+        newRow.appendChild(cell);
         table.appendChild(newRow);
     });
 }
