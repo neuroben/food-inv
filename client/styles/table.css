@@ -44,10 +44,13 @@ input{
   color: inherit;
 }
 img{
+  text-align: center;
   max-width: 20px;
   max-height: 20px;
+  display: flex;
 }
 img:hover{
   max-width: 25px;
   max-height: 25px;
+  transition-duration: 500ms;
 }

@@ -1,4 +1,4 @@
-import url from "../backend/routes.js";
+import url from "./routes.js";
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
