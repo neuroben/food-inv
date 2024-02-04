@@ -22,6 +22,14 @@
     background-color: #17181b;
   }
   a:active{
-    background-color: #0D0E10;
+    background-color: #0049db;
   }
-  
+  button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }

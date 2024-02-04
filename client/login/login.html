@@ -19,7 +19,8 @@
             </form>
 
             <script>
-                require('dotenv').config();
+                let STRAPI_U = "https://1337-neuroben-foodinv-inb7p9a3qw8.ws-eu108.gitpod.io"
+                let FRONTEND = "https://8000-neuroben-foodinv-inb7p9a3qw8.ws-eu108.gitpod.io"
                 const form = document.querySelector('form');
 
 
@@ -32,7 +33,7 @@
                     //console.log(formData.get('identifier'));
                     //console.log(formData.get('password'));
 
-                    fetch('https://1337-neuroben-foodinv-inb7p9a3qw8.ws-eu108.gitpod.io/api/auth/local', {
+                    fetch(`${STRAPI_U}/api/auth/local`, {
                         method: "POST",
                         body: formData,
                     })
@@ -41,7 +42,7 @@
                         console.log(data);
                         
                             if(data.user.blocked == false && data.user.confirmed == true ){
-                                window.location.replace(`${process.env.STRAPI_U}/food/food.html`);
+                                window.location.replace(`${FRONTEND}/client/food/food.html`);
                             } else {
                                 console.log('User is either blocked or not confirmed');
                             }
